@@ -186,7 +186,6 @@ function render() {
 
     tr.innerHTML = `
       <td>${ev.name}</td>
-      <td class="type ${ev.type}">${ev.type}</td>
       <td class="days">${formatDays(ev.days)}</td>
       <td class="countdown">${ev.times.join(" | ")}</td>
     `;

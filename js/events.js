@@ -4,7 +4,7 @@
 window.eventsConfig = [
   {
     name: "Devil Square",
-    type: "evento pve",
+    type: "pve",
     times: [
       "00:30",
       "02:30",
@@ -25,7 +25,7 @@ window.eventsConfig = [
   },
   {
     name: "Blood Castle",
-    type: "evento pve",
+    type: "pve",
     times: [
       "01:00",
       "03:00",
@@ -46,7 +46,7 @@ window.eventsConfig = [
   },
   {
     name: "Chaos Castle",
-    type: "evento pvp",
+    type: "pvpve",
     times: ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"],
 	entryTime: 5,
     duration: 10,
@@ -58,7 +58,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["07:30", "15:30", "23:30"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -66,7 +66,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["02:00", "10:00", "18:00"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -74,7 +74,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["03:30", "17:30"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -82,7 +82,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["09:30"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -90,7 +90,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["21:30"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -98,7 +98,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["16:00", "22:00"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -106,7 +106,7 @@ window.eventsConfig = [
     type: "invasão",
     times: ["01:30", "05:30", "11:30"],
 	entryTime: 0,
-    duration: 20,
+    duration: 15,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -114,16 +114,16 @@ window.eventsConfig = [
     type: "boss",
     times: ["01:00", "09:00", "17:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
-    // checkar horario
     name: "Erohim",
     type: "boss",
     times: ["19:40"],
 	entryTime: 0,
-    duration: 30
+    duration: 30,
+	days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
     name: "Mega Boss (Crywolf)",
@@ -138,7 +138,7 @@ window.eventsConfig = [
     type: "boss",
     times: ["00:00", "08:00", "16:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -146,7 +146,7 @@ window.eventsConfig = [
     type: "boss",
     times: ["02:00", "10:00", "18:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -154,7 +154,7 @@ window.eventsConfig = [
     type: "boss",
     times: ["03:00", "11:00", "19:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -162,7 +162,7 @@ window.eventsConfig = [
     type: "boss",
     times: ["07:00", "15:00", "23:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -170,7 +170,7 @@ window.eventsConfig = [
     type: "boss",
     times: ["06:00", "14:00", "22:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -178,7 +178,7 @@ window.eventsConfig = [
     type: "boss",
     times: ["05:00", "13:00", "21:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -186,10 +186,9 @@ window.eventsConfig = [
     type: "boss",
     times: ["04:00", "12:00", "20:00"],
 	entryTime: 0,
-    duration: 15,
+    duration: 30,
     days: [0, 1, 2, 3, 4, 5, 6]
   },
-
   {
     // checkar horario
     name: "Bônus de XP +50%",
@@ -198,5 +197,21 @@ window.eventsConfig = [
 	entryTime: 0,
     duration: 2880,
     days: [6, 0]
+  },
+  {
+    name: "Rei do PvP",
+    type: "special",
+    times: ["20:00"],
+	entryTime: 0,
+    duration: 30,
+    days: [1, 2, 3, 4, 5]
+  },
+  {
+    name: "Castle Siege",
+    type: "special",
+    times: ["18:00"],
+	entryTime: 0,
+    duration: 60,
+    days: [0]
   }
 ];
