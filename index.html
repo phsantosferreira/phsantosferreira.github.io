@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111">
+  <meta property="og:image" content="./img/ogimage.png">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <title>Eventos ZenMU</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+<div class="app">
+  <header>
+    <h1>Eventos ZenMU</h1>
+    <button id="toggleMode">Modo Schedule</button>
+  </header>
+  <!-- TABELA COUNTDOWN -->
+  <table id="tableCountdown">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Tipo</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="eventsCountdown"></tbody>
+  </table>
+  <!-- TABELA HORÁRIOS -->
+  <table id="tableStatic" class="hidden">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Tipo</th>
+        <th>Dias</th>
+        <th>Horários</th>
+      </tr>
+    </thead>
+    <tbody id="eventsStatic"></tbody>
+  </table>
+</div>
+<div class="author">
+	<p>Desenvolvido por: KOS</p>
+</div>
+
+<script src="./js/events.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* ===============================
+   BACKGROUND
+=============================== */
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  background: #111;
+  color: #d4af37;
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  */
+}
+
+/* ===============================
+   CONTAINER
+=============================== */
+.app {
+  margin: 8px;
+  border: 2px solid #5a4b2c;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  padding: 15px;
+}
+
+/* ===============================
+   HEADER
+=============================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 18px;
+  color: #ffd700;
+  text-shadow: 0 0 5px #000;
+}
+
+/* ===============================
+   BOTÕES
+=============================== */
+button {
+  background: linear-gradient(#2c2c2c, #111);
+  border: 1px solid #7c6a3a;
+  color: #ffd700;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover {
+  background: linear-gradient(#444, #222);
+}
+
+/* ===============================
+   TABELAS
+=============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* cabeçalho */
+thead {
+  background: linear-gradient(#1c1c1c, #000);
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #5a4b2c;
+  color: #c9b37c;
+}
+
+/* linhas */
+td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(90,75,44,0.3);
+}
+
+/* hover */
+tbody tr:hover {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+/* ===============================
+   DESTAQUE próximo evento
+=============================== */
+
+.next {
+  background: rgba(255, 215, 0, 0.1);
+  box-shadow: inset 0 0 10px rgba(255,215,0,0.2);
+}
+
+
+/* ===============================
+   STATUS
+=============================== */
+.countdown {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+.started {
+  color: #ff3b3b;
+  font-weight: bold;
+  text-shadow: 0 0 5px red;
+}
+
+.opened {
+  color: green;
+  font-weight: bold;
+  text-shadow: 0 0 5px green;
+}
+
+/* ===============================
+   TIPOS (compatível com seu JS)
+=============================== */
+.type {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.type.evento { color: #00ffcc; }
+.type.invasão { color: #ffaa00; }
+.type.boss { color: #ff4444; }
+.type.bônus { color: #4aa3ff; }
+
+/* ===============================
+   DIAS
+=============================== */
+.days {
+  font-size: 11px;
+  color: #c9b37c;
+}
+
+/* ===============================
+   VISIBILIDADE
+=============================== */
+.hidden {
+  display: none;
+}
+
+/* ===============================
+   AUTOR
+=============================== */
+.author p {
+	font-size: 10px;
+	color: #777;
+	text-align: center;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+=============================== */
+
+@media (min-width: 1024px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+	.app {
+		width: 900px;
+	}
+}
