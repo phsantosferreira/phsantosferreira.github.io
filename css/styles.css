@@ -83,6 +83,15 @@ tbody tr:hover {
   background: rgba(255, 215, 0, 0.05);
 }
 
+/* click sort */
+th[data-sort] {
+  cursor: pointer;
+}
+
+th[data-sort]:hover {
+  text-decoration: underline;
+}
+
 /* ===============================
    DESTAQUE próximo evento
 =============================== */

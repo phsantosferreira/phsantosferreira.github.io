@@ -7,6 +7,8 @@ const eventsConfig = window.eventsConfig || [];
 // ESTADO GLOBAL
 // ===============================
 let showStatic = false;
+let sortColumn = null;
+let sortAsc = true;
 
 // ===============================
 // ELEMENTOS DOM
@@ -18,6 +20,22 @@ const tableStatic = document.getElementById("tableStatic");
 
 const tbodyCountdown = document.getElementById("eventsCountdown");
 const tbodyStatic = document.getElementById("eventsStatic");
+
+// Ordena coluna
+document.querySelectorAll("th[data-sort]").forEach(th => {
+  th.addEventListener("click", () => {
+    const column = th.dataset.sort;
+
+    if (sortColumn === column) {
+      sortAsc = !sortAsc; // alterna direção
+    } else {
+      sortColumn = column;
+      sortAsc = true;
+    }
+
+    render();
+  });
+});
 
 // ===============================
 // CONSTANTES
@@ -152,6 +170,49 @@ function render() {
 
     return { ...event, current, opened, diff };
   });
+  
+  // ===========================
+  // SORT COLUMN
+  // ===========================
+  if (sortColumn) {
+	computed.sort((a, b) => {
+	let valA, valB;
+
+	switch (sortColumn) {
+	  case "name":
+		valA = a.name;
+		valB = b.name;
+		break;
+
+	  case "type":
+		valA = a.type;
+		valB = b.type;
+		break;
+
+	  case "status":
+		valA = a.diff;
+		valB = b.diff;
+		break;
+
+	  case "days":
+		valA = formatDays(a.days);
+		valB = formatDays(b.days);
+		break;
+
+	  case "times":
+		valA = a.times[0];
+		valB = b.times[0];
+		break;
+
+	  default:
+		return 0;
+	}
+
+	if (valA < valB) return sortAsc ? -1 : 1;
+	if (valA > valB) return sortAsc ? 1 : -1;
+	return 0;
+	});
+  }
 
   // ===========================
   // RENDER COUNTDOWN
