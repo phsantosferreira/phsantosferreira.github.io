@@ -101,8 +101,21 @@ tbody tr:hover {
   font-weight: bold;
 }
 
+.countdown.urgent {
+  color: #ff0000;
+  text-shadow: 0 0 5px red;
+  animation: blink 1s infinite;
+}
+
+/* opcional: efeito piscando */
+@keyframes blink {
+  50% {
+    opacity: 0.4;
+  }
+}
+
 .started {
-  color: #ff3b3b;
+  color: #ff0000;
   font-weight: bold;
   text-shadow: 0 0 5px red;
 }

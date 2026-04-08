@@ -163,11 +163,12 @@ function render() {
       tr.classList.add("next");
     }
 
+	const isUrgent = ev.diff <= 5 * 60 * 1000;
     const status = ev.opened
       ? `<span class="opened">Aberto</span>` 
       : ev.current
 			? `<span class="started">Iniciado</span>`
-			: `<span class="countdown">${formatCountdown(Math.max(0, ev.diff))}</span>`;
+			: `<span class="${isUrgent ? "countdown urgent" : "countdown"}">${formatCountdown(Math.max(0, ev.diff))}</span>`;
 
     tr.innerHTML = `
       <td>${ev.name}</td>
