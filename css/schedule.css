@@ -34,6 +34,18 @@ header h1 {
   text-shadow: 0 0 5px #000;
 }
 
+.nav {
+    margin: 8px;
+    padding: 15px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.nav .active {
+	background: linear-gradient(#9c9c9c, #333);
+}
+
 /* ===============================
    BOTÕES
 =============================== */

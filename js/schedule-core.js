@@ -256,6 +256,10 @@ function render() {
   });
 }
 
+function redirect(url) {
+	window.location.href = url;
+}
+
 // ===============================
 // LOOP
 // ===============================

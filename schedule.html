@@ -8,10 +8,15 @@
   <meta property="og:image" content="./img/ogimage.png">
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   <title>Eventos ZenMU</title>
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/schedule.css">
 </head>
 
 <body>
+
+<div class="nav">
+	<button class="active">Agenda de eventos</button>
+	<button onclick="redirect('map.html')">Mapas interativos</button>
+</div>
 
 <div class="app">
   <header>
@@ -45,7 +50,7 @@
 	<p>Desenvolvido por: KOS</p>
 </div>
 
-<script src="./js/events.js"></script>
-<script src="./js/script.js"></script>
+<script src="./js/schedule-events.js"></script>
+<script src="./js/schedule-core.js"></script>
 </body>
 </html>

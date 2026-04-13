@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <meta name="theme-color" content="#111">
+  <meta property="og:image" content="./img/ogimage.png">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <title>Mapa MU</title>
+  <link rel="stylesheet" href="./css/map.css">
+</head>
+<body>
+
+<div class="nav">
+	<button onclick="redirect('schedule.html')">Agenda de eventos</button>
+	<button class="active">Mapas interativos</button>
+</div>
+
+<div id="map-container">
+
+	<header>
+		<h1>Mapas ZenMU</h1>
+	
+
+		<div class="controls">
+			Mapa:
+			<select id="mapSelect">
+				<option value="lorencia">Lorencia</option>
+				<option value="noria">Noria</option>
+				<option value="devias">Devias</option>
+				<option value="dungeon">Dungeon</option>
+				<option value="atlans">Atlans</option>
+				<option value="losttower">Lost Tower</option>
+				<option value="tarkan">Tarkan</option>
+				<option value="icarus">Icarus</option>
+				<option value="ruins">Kanturu Ruins</option>
+				<option value="relics">Kanturu Relics</option>
+				<option value="land">Land of Trials</option>
+				<option value="aida">Aida</option>
+				<option value="crywolf">Crywolf Fortress</option>
+				<option value="balgass">Balgass Barracks</option>
+			</select>
+		</div>
+	</header>
+
+	<div class="top-controls">
+		Y: <input type="number" id="inputY" min="0" max="255">
+		X: <input type="number" id="inputX" min="0" max="255">
+		<button id="addBtn">Ir para coordenada</button>
+		<span id="coords">Y: -, X: -</span>
+	</div>
+
+	<img id="map">
+
+</div>
+<div class="author">
+	<p>Desenvolvido por: KOS</p>
+</div>
+
+<script src="./js/map.js"></script>
+</body>
+</html>
