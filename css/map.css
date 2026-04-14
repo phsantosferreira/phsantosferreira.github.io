@@ -62,7 +62,6 @@ header h1 {
   width: 100%;
   display: block;
   cursor: crosshair;
-  touch-action: none;
 }
 
 /* 🔴 MARKER ORIGINAL (PONTO VERMELHO) */

@@ -129,41 +129,6 @@ function redirect(url) {
 	window.location.href = url;
 }
 
-// ===============================
-// ZOOM MOBILE (PINCH)
-// ===============================
-let scale = 1;
-let lastDistance = null;
-
-function getDistance(touches) {
-  const dx = touches[0].clientX - touches[1].clientX;
-  const dy = touches[0].clientY - touches[1].clientY;
-  return Math.sqrt(dx * dx + dy * dy);
-}
-
-map.addEventListener("touchmove", (e) => {
-  if (e.touches.length === 2) {
-    e.preventDefault();
-
-    const distance = getDistance(e.touches);
-
-    if (lastDistance) {
-      let delta = distance - lastDistance;
-
-      scale += delta * 0.005;
-      scale = Math.min(Math.max(1, scale), 3);
-
-      map.style.transform = `scale(${scale})`;
-    }
-
-    lastDistance = distance;
-  }
-});
-
-map.addEventListener("touchend", () => {
-  lastDistance = null;
-});
-
 // init
 map.src = getCurrentMap().src;
 
