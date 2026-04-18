@@ -110,6 +110,104 @@ input, select {
   text-align: center;
 }
 
+/* ===============================
+   NPCs
+=============================== */
+.pin {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  /*
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background-size: 70%;
+  background-position: center;
+  */
+}
+
+.pin.monster {
+  /*
+  filter:
+  drop-shadow(0 0 2px #fff)
+  drop-shadow(0 0 2px #fff)
+  drop-shadow(0 0 2px #fff)
+  drop-shadow(0 0 2px #fff);
+  */
+}
+
+.pin.npc {
+  filter:
+  drop-shadow(0 0 2px #fff)
+  drop-shadow(0 0 2px #fff)
+  drop-shadow(0 0 2px #fff)
+  drop-shadow(0 0 2px #fff);
+}
+
+/* container */
+.toggles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px;
+}
+
+/* switch base */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #ffd700;
+  font-size: 12px;
+}
+
+/* esconder checkbox padrão */
+.switch input {
+  display: none;
+}
+
+/* trilho */
+.slider {
+  width: 40px;
+  height: 20px;
+  background: #333;
+  border: 1px solid #7c6a3a;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* bolinha */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  background: #999;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* ativo */
+.switch input:checked + .slider {
+  background: #2c2c2c;
+  box-shadow: 0 0 5px #ffd700;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+  background: #ffd700;
+}
+
 @media screen and (max-width: 768px) {
 	#map-container {
 	/*touch-action: none;*/ /* necessário pro pinch */
